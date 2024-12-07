@@ -10,7 +10,7 @@ namespace ProyectoP2.Models
     internal class Membresias
     {
         
-        public int Id_Membresias {  get; set; }
+        public string Id_Membresias {  get; set; }
         [MinLength(10)]
         [MaxLength(10)]
         public string Cedula {  get; set; }

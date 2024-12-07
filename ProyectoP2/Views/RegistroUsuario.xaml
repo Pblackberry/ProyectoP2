@@ -71,5 +71,6 @@
                 Clicked="NuevoUsuario_Clicked"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"/>
+        
     </VerticalStackLayout>
 </ContentPage>
