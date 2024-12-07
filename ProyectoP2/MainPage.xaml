@@ -5,7 +5,7 @@
 
     <VerticalStackLayout>
         <Label
-               Text="Bienvenido al gymBolasBolongas"
+               Text="Bienvenido al gym"
                HorizontalOptions="Center"
                VerticalOptions="Center"/>
     </VerticalStackLayout>

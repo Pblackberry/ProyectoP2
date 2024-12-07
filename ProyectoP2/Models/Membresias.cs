@@ -16,6 +16,6 @@ namespace ProyectoP2.Models
         public string Cedula {  get; set; }
         public string Nombre { get; set; }
         public string Membresia { get; set; }
-        public DateOnly Caducidad { get; set; }
+        
     }
 }
