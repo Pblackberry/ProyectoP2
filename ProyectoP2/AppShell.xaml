@@ -8,10 +8,11 @@
     Title="ProyectoP2">
 
     <TabBar>
-        <Tab>
-            <ShellContent>
-                
-            </ShellContent>
+        <Tab Title="Home">
+            <ShellContent
+                Title="Home"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage"/>
         </Tab>
     </TabBar>
 

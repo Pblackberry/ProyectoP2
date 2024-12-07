@@ -4,7 +4,7 @@
              x:Class="ProyectoP2.MainPage">
 
     <VerticalStackLayout>
-        <Label x:Name="label 1"
+        <Label
                Text="Bienvenido al gymBolasBolongas"
                HorizontalOptions="Center"
                VerticalOptions="Center"/>
