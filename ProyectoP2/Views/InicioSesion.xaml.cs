@@ -14,6 +14,7 @@ public partial class InicioSesion : ContentPage
 
     private void Registrar_Clicked(object sender, EventArgs e)
     {
+        Navigation.PushAsync(new Views.RegistroUsuario());
 
     }
 }

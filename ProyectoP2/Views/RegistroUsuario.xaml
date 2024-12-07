@@ -4,6 +4,72 @@
              x:Class="ProyectoP2.Views.RegistroUsuario"
              Title="RegistroUsuario">
     <VerticalStackLayout>
-        
+        <Label Text="Registro de usuario"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <VerticalStackLayout Grid.Column="0" Grid.Row="0">
+                <Label Text="Nombre"/>
+                <Editor x:Name="Nombre_Editor"
+                        Placeholder="Ingrese su nombre"
+                        AutoSize="TextChanges"
+                        HeightRequest="50"
+                        />
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Column="1" Grid.Row="0">
+                <Label Text="Correo"/>
+                <Editor x:Name="Correo_Editor"
+                        Placeholder="Ingrese su correo"
+                        AutoSize="TextChanges"
+                        HeightRequest="50"
+                        />
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Column="0" Grid.Row="1">
+                <Label Text="Cedula"/>
+                <Editor x:Name="Cedula_Editor"
+                        Placeholder="Ingrese su Cedula"
+                        AutoSize="TextChanges"
+                        HeightRequest="50"
+                        />
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Column="1" Grid.Row="1">
+                <Label Text="Contraseña"/>
+                <Editor x:Name="Contrasena_Editor"
+                        Placeholder="Ingrese su Contraseña"
+                        AutoSize="TextChanges"
+                        HeightRequest="50"
+                        />
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Column="0" Grid.Row="2">
+                <Label Text="Identificador"/>
+                <Editor x:Name="ID_Editor"
+                        Placeholder="Ingrese un identificador"
+                        AutoSize="TextChanges"
+                        HeightRequest="50"
+                        />
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Column="1" Grid.Row="2">
+                <Label Text="Credenciales"/>
+                <Editor x:Name="Credenciales_Editor"
+                        Placeholder="Credenciales del usuario"
+                        AutoSize="TextChanges"
+                        HeightRequest="50"
+                        />
+            </VerticalStackLayout>
+        </Grid>
+        <Button x:Name="NuevoUsuario"
+                Text="Registrar"
+                Clicked="NuevoUsuario_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
     </VerticalStackLayout>
 </ContentPage>

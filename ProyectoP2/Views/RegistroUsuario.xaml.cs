@@ -6,4 +6,9 @@ public partial class RegistroUsuario : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void NuevoUsuario_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
