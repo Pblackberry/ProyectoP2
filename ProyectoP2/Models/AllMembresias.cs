@@ -10,7 +10,7 @@ namespace ProyectoP2.Models
 {
     public class AllMembresias
     {
-        string _fileMembresias = "C:\\Users\\tomas\\OneDrive\\Documents\\UDLA quinto semestre\\Programacion IV\\ProyectoP2\\Membresias1.txt";
+        string _fileMembresias = Path.Combine(FileSystem.AppDataDirectory, "Membresias.txt");
         public ObservableCollection<Membresias> CollectionMembresias { get; set; } = new ObservableCollection<Membresias>();
         public AllMembresias() => 
             LoadMembresias();

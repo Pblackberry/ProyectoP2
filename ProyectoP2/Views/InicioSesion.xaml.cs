@@ -6,40 +6,50 @@ using System.Security.Cryptography.X509Certificates;
 
 public partial class InicioSesion : ContentPage
 {
-    string _fileUsuarios = "C:\\Users\\tomas\\OneDrive\\Documents\\UDLA quinto semestre\\Programacion IV\\ProyectoP2\\Usuarios.txt";
-    string _fileMembresias = "C:\\Users\\tomas\\OneDrive\\Documents\\UDLA quinto semestre\\Programacion IV\\ProyectoP2\\Membresias1.txt";
+    string _fileUsuarios = Path.Combine(FileSystem.AppDataDirectory, "Usuarios.txt");
+    string _fileMembresias = Path.Combine(FileSystem.AppDataDirectory, "Membresias.txt");
     Usuarios usuario= new Usuarios();
 
     public InicioSesion()
 	{
 		InitializeComponent();
 	}
-
+    List<Usuarios> _usuarios = new List<Usuarios>();
     private async void IniciarSesion_Clicked(object sender, EventArgs e)
     {
-        int a = 0;
-        IEnumerable<Usuarios> usuarios = DevuelveListadoUsuarios();
-        foreach (Usuarios user in usuarios)
+        
+        
+        if ((File.Exists(_fileUsuarios)) )
         {
-            if ((user.Clave == ClaveInicio.Text) && (user.Correo == CorreoInicio.Text))
+            int a = 0;
+            IEnumerable<Usuarios> usuarios = DevuelveListadoUsuarios();
+            foreach (Usuarios user in usuarios)
             {
-                if (user.Credenciales == "Administrador")
+                if ((user.Clave == ClaveInicio.Text) && (user.Correo == CorreoInicio.Text))
                 {
-                    a = 1;
-                    Navigation.PushAsync(new Views.MembresiaAdministrador());
+                    if (user.Credenciales == "Administrador")
+                    {
+                        a = 1;
+                        Navigation.PushAsync(new Views.MembresiaAdministrador());
+                    }
+                    if (user.Credenciales == "Cliente")
+                    {
+                        a = 1;
+                        Navigation.PushAsync(new Views.MembresiaUsuario(user));
+                    }
                 }
-                if (user.Credenciales == "Cliente")
-                {
-                    a = 1;
-                    Navigation.PushAsync (new Views.MembresiaUsuario(user));
-                }
+
             }
-                
+            if (a == 0)
+            {
+                await DisplayAlert("Inicio de sesión fallido", "Usuario o contraseña incorrectos", "ok");
+            }
         }
-        if (a == 0)
+        else
         {
-            await DisplayAlert("Inicio de sesión fallido", "Usuario o contraseña incorrectos", "ok");
+            await DisplayAlert("Inicio de sesión fallido", "No hay usuarios registrados", "ok");
         }
+        
         
 
     }
