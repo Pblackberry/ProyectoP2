@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoP2.Models
 {
-    internal class Usuarios
+    public class Usuarios
     {
         public string Correo { get; set; }
         public string Clave { get; set; }

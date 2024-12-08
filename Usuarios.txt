@@ -1,1 +1,12 @@
-{"Correo":"asdadad","Clave":"sadaa","Credenciales":"adadad"}
+[
+  {
+    "Correo": "a",
+    "Clave": "2",
+    "Credenciales": "Administrador"
+  },
+  {
+    "Correo": "e",
+    "Clave": "1",
+    "Credenciales": "Administrador"
+  }
+]

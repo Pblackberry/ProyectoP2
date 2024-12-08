@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoP2.Models
 {
-    internal class Membresias
+    public class Membresias
     {
         
         public string Id_Membresias {  get; set; }

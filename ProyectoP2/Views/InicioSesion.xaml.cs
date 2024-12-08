@@ -16,15 +16,25 @@ public partial class InicioSesion : ContentPage
 
     private void IniciarSesion_Clicked(object sender, EventArgs e)
     {
-        
+        IEnumerable<Usuarios> usuarios = DevuelveListadoUsuarios();
+        foreach (Usuarios user in usuarios)
+        {
+            if ((user.Clave== ClaveInicio.Text) && (user.Correo == CorreoInicio.Text))
+            {
+                if (user.Credenciales == "Administrador")
+                {
+                    Navigation.PushAsync(new Views.MembresiaAdministrador());
+                }
+            }
+        }
 
     }
 
     public IEnumerable<Usuarios> DevuelveListadoUsuarios()
     {
-        IEnumerable<Usuarios> usuarios;
+        List<Usuarios> usuarios;
         string jsonData=File.ReadAllText(_fileUsuarios);
-        usuarios=JsonConvert.DeserializeObject<IEnumerable<Usuarios>>(jsonData);
+        usuarios=JsonConvert.DeserializeObject<List<Usuarios>>(jsonData);
         return usuarios;
     }
 
