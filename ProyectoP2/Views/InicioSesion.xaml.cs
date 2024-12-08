@@ -7,6 +7,7 @@ using System.Security.Cryptography.X509Certificates;
 public partial class InicioSesion : ContentPage
 {
     string _fileUsuarios = "C:\\Users\\tomas\\OneDrive\\Documents\\UDLA quinto semestre\\Programacion IV\\ProyectoP2\\Usuarios.txt";
+    string _fileMembresias = "C:\\Users\\tomas\\OneDrive\\Documents\\UDLA quinto semestre\\Programacion IV\\ProyectoP2\\Membresias1.txt";
     Usuarios usuario= new Usuarios();
 
     public InicioSesion()
@@ -30,7 +31,7 @@ public partial class InicioSesion : ContentPage
                 if (user.Credenciales == "Cliente")
                 {
                     a = 1;
-                    Navigation.PushAsync (new Views.MembresiaUsuario());
+                    Navigation.PushAsync (new Views.MembresiaUsuario(user));
                 }
             }
                 
@@ -50,6 +51,7 @@ public partial class InicioSesion : ContentPage
         usuarios=JsonConvert.DeserializeObject<List<Usuarios>>(jsonData);
         return usuarios;
     }
+    
 
     private void Registrar_Clicked(object sender, EventArgs e)
     {
