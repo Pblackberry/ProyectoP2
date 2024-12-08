@@ -59,10 +59,16 @@
             </VerticalStackLayout>
             <VerticalStackLayout Grid.Column="1" Grid.Row="2">
                 <Label Text="Credenciales"/>
-                <Editor x:Name="Credenciales_Editor"
-                        Placeholder="Credenciales del usuario"
-                        AutoSize="TextChanges"
-                        HeightRequest="50" />
+                <Picker x:Name="Credenciales_Editor"
+                        Title="Seleccione una opcion"
+                        SelectedIndexChanged="Credenciales_Editor_SelectedIndexChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Cliente</x:String>
+                            <x:String>Administrador</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
             </VerticalStackLayout>
         </Grid>
         <Button x:Name="NuevoUsuario"

@@ -7,7 +7,7 @@ namespace ProyectoP2.Views;
 
 public partial class RegistroUsuario : ContentPage
 {
-    
+    string valor=".";   
     
     List<Membresias> _membresias = new List<Membresias>();
     List<Usuarios> _usuarios = new List<Usuarios>();
@@ -30,12 +30,12 @@ public partial class RegistroUsuario : ContentPage
                 _usuarios = JsonConvert.DeserializeObject<List<Usuarios>>(dataUsuarios);
             }
         }
-        
+
         Usuarios usuario = new Usuarios()
         {
-            Correo=Correo_Editor.Text,
-            Clave=Contrasena_Editor.Text,
-            Credenciales=Credenciales_Editor.Text
+            Correo = Correo_Editor.Text,
+            Clave = Contrasena_Editor.Text,
+            Credenciales = valor
         };
         _usuarios.Add(usuario);
 
@@ -48,13 +48,13 @@ public partial class RegistroUsuario : ContentPage
                 _membresias = JsonConvert.DeserializeObject<List<Membresias>>(dataMembresias);
             }
         }
-        
+
         Membresias membresia = new Membresias()
         {
-            Nombre=Nombre_Editor.Text,
-            Cedula=Cedula_Editor.Text,
-            Id_Membresias=ID_Editor.Text,
-            Membresia=Credenciales_Editor.Text
+            Nombre = Nombre_Editor.Text,
+            Cedula = Cedula_Editor.Text,
+            Id_Membresias = ID_Editor.Text,
+            Membresia = valor
         };
         _membresias.Add(membresia);
         
@@ -88,5 +88,10 @@ public partial class RegistroUsuario : ContentPage
 
     }
 
-    
+    private void Credenciales_Editor_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        var picker=(Picker)sender;
+        valor=(string)picker.SelectedItem;
+        
+    }
 }
