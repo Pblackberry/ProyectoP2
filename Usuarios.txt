@@ -8,5 +8,15 @@
     "Correo": "e",
     "Clave": "1",
     "Credenciales": "Administrador"
+  },
+  {
+    "Correo": "p",
+    "Clave": "3",
+    "Credenciales": "Administrador"
+  },
+  {
+    "Correo": "s",
+    "Clave": "4",
+    "Credenciales": "Cliente"
   }
 ]

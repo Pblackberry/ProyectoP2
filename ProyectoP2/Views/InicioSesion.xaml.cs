@@ -14,19 +14,32 @@ public partial class InicioSesion : ContentPage
 		InitializeComponent();
 	}
 
-    private void IniciarSesion_Clicked(object sender, EventArgs e)
+    private async void IniciarSesion_Clicked(object sender, EventArgs e)
     {
+        int a = 0;
         IEnumerable<Usuarios> usuarios = DevuelveListadoUsuarios();
         foreach (Usuarios user in usuarios)
         {
-            if ((user.Clave== ClaveInicio.Text) && (user.Correo == CorreoInicio.Text))
+            if ((user.Clave == ClaveInicio.Text) && (user.Correo == CorreoInicio.Text))
             {
                 if (user.Credenciales == "Administrador")
                 {
+                    a = 1;
                     Navigation.PushAsync(new Views.MembresiaAdministrador());
                 }
+                if (user.Credenciales == "Cliente")
+                {
+                    a = 1;
+                    Navigation.PushAsync (new Views.MembresiaUsuario());
+                }
             }
+                
         }
+        if (a == 0)
+        {
+            await DisplayAlert("Inicio de sesión fallido", "Usuario o contraseña incorrectos", "ok");
+        }
+        
 
     }
 

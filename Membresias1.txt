@@ -10,5 +10,17 @@
     "Cedula": "0987654321",
     "Nombre": "estebin",
     "Membresia": "Administrador"
+  },
+  {
+    "Id_Membresias": "3",
+    "Cedula": "1029384756",
+    "Nombre": "Perejil",
+    "Membresia": "Administrador"
+  },
+  {
+    "Id_Membresias": "4",
+    "Cedula": "1234509876",
+    "Nombre": "Sebas",
+    "Membresia": "Cliente"
   }
 ]
