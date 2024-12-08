@@ -2,46 +2,54 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoP2.Views.InicioSesion"
-             Title="InicioSesion">
+             Title="Inicio de Sesión">
     <VerticalStackLayout>
-        <Label 
-            Text="Inicio de Sesion!"
-            FontAttributes="Bold"
-            FontSize="50"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <StackLayout Padding="10">
+            <Label 
+                Text="Inicio de Sesión"
+                FontAttributes="Bold"
+                FontSize="Title"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <Label 
+                Text="Ingrese sus credenciales para acceder a información de membresías."
+                FontAttributes="None" 
+                FontSize="Default"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+        </StackLayout>
 
-        <Label 
-            Text="Ingrese sus credenciales para acceder a información de membresías"
-            FontAttributes="None" 
-            FontSize="25"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Label 
-            Text="Correo electrónico:"
-            FontAttributes="None" 
-            FontSize="25"/>
-        <Editor x:Name="CorreoInicio"
+        <StackLayout Padding="20" HorizontalOptions="Center">
+            <Label 
+                Text="Correo electrónico:"
+                FontAttributes="None" 
+                FontSize="Small"/>
+            <Editor x:Name="CorreoInicio"
                 Placeholder="Ingrese su correo electrónico"
-                AutoSize="TextChanges"
+                WidthRequest="300"
                 HeightRequest="50"
                 HorizontalOptions="Center"
-                VerticalOptions="Center"/>
-        <Label 
-            Text="Correo electrónico:"
-            FontAttributes="None" 
-            FontSize="25"/>
-        <Editor x:Name="ClaveInicio"
-            Placeholder="Ingrese su contraseña"
-            AutoSize="TextChanges"
-            HeightRequest="50"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"/>
-        <Button x:Name="IniciarSesion"
-                Text="Iniciar"
-                Clicked="IniciarSesion_Clicked"
+                VerticalOptions="Center"
+                Margin="10"/>
+            <Label 
+                Text="Contraseña:"
+                FontAttributes="None" 
+                FontSize="Small"/>
+            <Editor x:Name="ClaveInicio"
+                Placeholder="Ingrese su contraseña"
+                WidthRequest="300"
+                HeightRequest="50"
                 HorizontalOptions="Center"
-                VerticalOptions="Center"/>
+                VerticalOptions="Center"
+                Margin="10"/>
+            <Button x:Name="IniciarSesion"
+                    BackgroundColor="Green"
+                    Text="Iniciar"
+                    Clicked="IniciarSesion_Clicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+        </StackLayout>
+
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -51,12 +59,12 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button x:Name="Registrar"
-                Text="Registrar Usuario"
-                Clicked="Registrar_Clicked"
-                HorizontalOptions="Center"
-                Grid.Row="0" Grid.Column="1"/>
+                    BackgroundColor="DarkOrange"
+                    Text="Registrar Usuario"
+                    Clicked="Registrar_Clicked"
+                    HorizontalOptions="Center"
+                    Grid.Row="0" Grid.Column="1"/>
         </Grid>
-            
-        
+
     </VerticalStackLayout>
 </ContentPage>
