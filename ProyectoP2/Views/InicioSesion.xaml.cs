@@ -13,6 +13,16 @@ public partial class InicioSesion : ContentPage
     public InicioSesion()
 	{
 		InitializeComponent();
+        if (!File.Exists(_fileUsuarios))
+        {
+            Usuarios usuarioOG = new Usuarios { Correo = "admin@gmail.com",
+            Clave="1234",
+            Credenciales="Administrador"};
+            List <Usuarios> lista = new List<Usuarios>();
+            lista.Add(usuarioOG);
+            string jsonData=JsonConvert.SerializeObject(lista);
+            File.WriteAllText(_fileUsuarios, jsonData);
+        }
 	}
     List<Usuarios> _usuarios = new List<Usuarios>();
     private async void IniciarSesion_Clicked(object sender, EventArgs e)
@@ -65,7 +75,7 @@ public partial class InicioSesion : ContentPage
 
     private void Registrar_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new Views.RegistroUsuario());
+        Navigation.PushAsync(new Views.RegistrarSimple());
 
     }
 }

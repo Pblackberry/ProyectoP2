@@ -13,4 +13,9 @@ public partial class MembresiaAdministrador : ContentPage
     {
 		((Models.AllMembresias)BindingContext).LoadMembresias();
     }
+
+    private void BotonRegistrar_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new Views.RegistroUsuario());
+    }
 }
