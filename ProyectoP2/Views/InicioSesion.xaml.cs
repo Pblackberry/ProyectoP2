@@ -18,10 +18,15 @@ public partial class InicioSesion : ContentPage
             Usuarios usuarioOG = new Usuarios { Correo = "admin@gmail.com",
             Clave="1234",
             Credenciales="Administrador"};
+            Membresias membresiaOG = new Membresias { Cedula = "0987654321", Id_Membresias = "0", Membresia = "Administrador", Nombre = "OG" };
             List <Usuarios> lista = new List<Usuarios>();
+            List<Membresias> listam = new List<Membresias>();
+            listam.Add(membresiaOG);
             lista.Add(usuarioOG);
-            string jsonData=JsonConvert.SerializeObject(lista);
-            File.WriteAllText(_fileUsuarios, jsonData);
+            string jsonData1=JsonConvert.SerializeObject(lista);
+            string jsonData2=JsonConvert.SerializeObject(listam);
+            File.WriteAllText(_fileUsuarios, jsonData1);
+            File.WriteAllText(_fileMembresias, jsonData2);
         }
 	}
     List<Usuarios> _usuarios = new List<Usuarios>();
