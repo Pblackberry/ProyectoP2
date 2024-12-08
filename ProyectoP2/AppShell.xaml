@@ -14,12 +14,19 @@
                 ContentTemplate="{DataTemplate local:MainPage}"
                 Route="MainPage"/>
         </Tab>
+        <Tab Title="About">
+            <ShellContent
+                Title="About"
+                ContentTemplate="{DataTemplate local:Views.AboutPage}"
+                Route="AboutPage"/>
+        </Tab>
         <Tab Title="Membresias">
             <ShellContent 
                 Title="Membresias"
                 ContentTemplate="{DataTemplate local:Views.InicioSesion}"
                 Route="InicioSesion"/>
         </Tab>
+        
     </TabBar>
 
 </Shell>
