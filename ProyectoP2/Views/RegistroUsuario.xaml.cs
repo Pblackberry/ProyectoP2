@@ -23,11 +23,13 @@ public partial class RegistroUsuario : ContentPage
     public async void NuevoUsuario_Clicked(object sender, EventArgs e)
     {
         
-        string dataUsuarios=File.ReadAllText(_fileUsuarios);
-        if (!string.IsNullOrEmpty(dataUsuarios))
-        {
-            _usuarios = JsonConvert.DeserializeObject<List<Usuarios>>(dataUsuarios);
-        }
+           string dataUsuarios = File.ReadAllText(_fileUsuarios);
+           if (!string.IsNullOrEmpty(dataUsuarios))
+           {
+               _usuarios = JsonConvert.DeserializeObject<List<Usuarios>>(dataUsuarios);
+           }
+        
+        
         
         Usuarios usuario = new Usuarios()
         {

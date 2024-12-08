@@ -3,10 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoP2.Views.MembresiaAdministrador"
              Title="MembresiaAdministrador">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <CollectionView x:Name="CollectionMembresias"
+                ItemsSource="{Binding CollectionMembresias}"
+                Margin="20">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <HorizontalStackLayout>
+                            <Label Text="Id membresía: "/>
+                            <Label Text="{Binding Id_Membresias}"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <Label Text="Nombre: "/>
+                            <Label Text="{Binding Nombre}"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <Label Text="Cedula: "/>
+                            <Label Text="{Binding Cedula}"/>
+                        </HorizontalStackLayout>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ScrollView>
+    
 </ContentPage>
