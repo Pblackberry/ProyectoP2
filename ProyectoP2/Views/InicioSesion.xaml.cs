@@ -9,6 +9,8 @@ public partial class InicioSesion : ContentPage
     string _fileUsuarios = Path.Combine(FileSystem.AppDataDirectory, "Usuarios.txt");
     string _fileMembresias = Path.Combine(FileSystem.AppDataDirectory, "Membresias.txt");
     Usuarios usuario= new Usuarios();
+    DateTime fechaHoy = DateTime.Today;
+    
 
     public InicioSesion()
 	{
@@ -49,8 +51,21 @@ public partial class InicioSesion : ContentPage
                     }
                     if (user.Credenciales == "Cliente")
                     {
+                        DayOfWeek diaSemana = fechaHoy.DayOfWeek;
                         a = 1;
-                        Navigation.PushAsync(new Views.MembresiaUsuario(user));
+                        if (diaSemana == DayOfWeek.Monday || diaSemana == DayOfWeek.Thursday)
+                        {
+                            Navigation.PushAsync(new Views.MembresiaUsuario(user));
+                        }
+                        else if (diaSemana == DayOfWeek.Tuesday || diaSemana == DayOfWeek.Friday)
+                        {
+                            Navigation.PushAsync(new Views.MembresiaUsuarioEspalda());
+                        }
+                        else
+                        {
+                            Navigation.PushAsync(new Views.MembresiaUsuarioPiernas());
+                        }
+
                     }
                 }
 

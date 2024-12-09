@@ -6,8 +6,11 @@
     <VerticalStackLayout>
         <HorizontalStackLayout>
             <Label Text="Bienvenido a tu app Fitness"/>
-
-            
+            <Label 
+                   Text="HOY TOCA PECHO"/>
+            <Image Source="chest.png"/>
+            <Label 
+                   Text="Rutina"/>
         </HorizontalStackLayout>
         
     </VerticalStackLayout>

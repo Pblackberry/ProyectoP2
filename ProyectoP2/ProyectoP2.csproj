@@ -92,6 +92,12 @@
 	  <MauiXaml Update="Views\MembresiaUsuario.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\MembresiaUsuarioEspalda.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MembresiaUsuarioPiernas.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\RegistrarSimple.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
