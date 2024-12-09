@@ -3,11 +3,136 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoP2.MainPage">
 
-    <VerticalStackLayout>
-        <Label
-               Text="Bienvenido al gym"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"/>
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout Spacing="0">
+
+            <!-- Header -->
+            <Grid BackgroundColor="Black" Padding="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="logo_icon.jpg" HeightRequest="100" WidthRequest="100" />
+                <Label Text="Power Gym" 
+                       Grid.Column="1"
+                       VerticalOptions="Center"
+                       TextColor="White"
+                       FontSize="50"
+                       FontAttributes="Bold" />
+            </Grid>
+
+            <Image Source="imagen_gym.jpg" 
+                   Aspect="AspectFill"
+                   HeightRequest="250"
+                   Margin="10" />
+
+            <!-- Icon Section -->
+            <Grid Padding="10" ColumnSpacing="10" RowSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center">
+                    <Image Source="running_icon.jpg" HeightRequest="50"/>
+                    <Label Text="Running" FontSize="12" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
+                    <Image Source="bodybuilder.jpg" HeightRequest="50" />
+                    <Label Text="Bodybuilding" FontSize="12" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="2" HorizontalOptions="Center">
+                    <Image Source="estiramiento2.jpeg" HeightRequest="50" />
+                    <Label Text="Stretching" FontSize="12" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="3" HorizontalOptions="Center">
+                    <Image Source="training.png" HeightRequest="50" />
+                    <Label Text="Training" FontSize="12" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="4" HorizontalOptions="Center">
+                    <Image Source="sport.jpg" HeightRequest="50" />
+                    <Label Text="Sport" FontSize="12" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="5" HorizontalOptions="Center">
+                    <Image Source="lifestyle.jpg" HeightRequest="50" />
+                    <Label Text="LifeStyle" FontSize="12" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Grid>
+
+            <!--Main Content Section-->
+            <VerticalStackLayout Padding="10" Spacing="10">
+
+                <!--Section 1: Fitness Club-->
+                <Frame BackgroundColor="LightGray" CornerRadius="10" Padding="10">
+                    <VerticalStackLayout>
+                        <Label Text="Fitness Club: Tu Compañero en el Camino hacia un Estilo de Vida Saludable" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                        <Label Text="En Fitness Club, creemos que el bienestar físico y mental son pilares fundamentales para una vida plena y saludable. Nuestro club está diseñado para ofrecerte todo lo que necesitas para alcanzar tus metas de fitness, independientemente de tu nivel de experiencia. Desde principiantes hasta atletas avanzados, aquí encontrarás el ambiente, las herramientas y el apoyo necesarios para triunfar. Contamos con una amplia variedad de equipos de última generación, ideales para entrenamiento cardiovascular, musculación y ejercicios funcionales. Además, nuestras instalaciones incluyen áreas dedicadas para yoga, pilates y clases grupales como zumba, spinning y entrenamiento HIIT, que te ayudarán a mantenerte motivado y disfrutar del ejercicio mientras mejoras tu condición física. Lo que realmente nos diferencia es nuestro equipo de entrenadores altamente capacitados, quienes están siempre disponibles para guiarte en cada paso de tu proceso. Ofrecemos planes personalizados de entrenamiento y asesoramiento nutricional adaptados a tus necesidades y objetivos específicos, ya sea perder peso, ganar masa muscular o simplemente mejorar tu salud general. En Fitness Club, también nos preocupamos por crear una comunidad positiva y motivadora. Organizamos actividades especiales como retos de fitness, talleres de bienestar y eventos sociales para fomentar un sentido de pertenencia entre nuestros miembros. Sabemos que alcanzar tus metas es más fácil cuando estás rodeado de personas que comparten tus mismos intereses y te apoyan en el camino. Únete a nosotros y transforma tu vida. No importa si tu objetivo es correr tu primera carrera, sentirte con más energía durante el día o simplemente desconectar del estrés diario, Fitness Club es el lugar perfecto para comenzar. ¡Es hora de dar el primer paso hacia la mejor versión de ti mismo!"
+                               TextColor="Black"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!--Section 2: News & Updates-->
+                <Frame BackgroundColor="LightGray" CornerRadius="10" Padding="10">
+                    <VerticalStackLayout>
+                        <Label Text="News and Updates. Mantente Informado y Motivado" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                        <Label Text="En Fitness Club, queremos mantenerte al día con las últimas noticias, consejos y novedades para ayudarte a alcanzar tus metas de salud y bienestar. Nuestra sección de News and Updates está diseñada para brindarte información relevante sobre fitness, nutrición, eventos y tendencias del mundo del deporte."
+                               TextColor="Black"/>
+                        <Label Text ="Lo Último en Entrenamiento y Salud"
+                               TextColor="Black"/>
+                        <Label Text ="Te ofrecemos artículos semanales con consejos de entrenamiento diseñados por nuestros expertos, ideales tanto para principiantes como para avanzados. Aprende sobre las técnicas de ejercicio más efectivas, nuevas rutinas para diversificar tu entrenamiento y formas de optimizar tu rendimiento físico. Además, encontrarás tips prácticos para evitar lesiones y mantener la motivación alta en cada sesión."
+                               TextColor="Black"/>
+                        <Label Text ="Eventos y Actividades Exclusivas" TextColor="Black"/>
+                        <Label Text = "Descubre todo lo que está ocurriendo en Fitness Club. Desde retos de fitness hasta clases especiales y talleres, queremos que participes y te sientas parte de nuestra comunidad. Mantente atento a nuestras competiciones amistosas, jornadas de puertas abiertas y eventos de networking con otros miembros del club."
+                               TextColor="Black"/>
+                        <Label Text ="Asesoramiento Nutricional y de Bienestar"
+                               TextColor="Black"/>
+                        <Label Text ="La nutrición es clave para complementar tu entrenamiento. Publicamos recetas saludables, planes de alimentación y consejos prácticos para mantener una dieta equilibrada, ajustada a tus necesidades y objetivos. También incluimos información sobre manejo del estrés, sueño reparador y bienestar emocional, porque sabemos que la salud integral abarca cuerpo y mente."
+                               TextColor="Black"/>
+                        <Label Text ="Historias de Éxito"
+                               TextColor="Black"/>
+                        <Label Text="Buscas inspiración? Conoce las historias de nuestros miembros que han transformado sus vidas con dedicación y esfuerzo. Sus logros son un recordatorio de que tú también puedes alcanzar tus metas.
+                               Visita nuestra sección de News and Updates regularmente para mantenerte informado, motivado e inspirado en tu camino hacia un estilo de vida saludable. ¡Estamos aquí para apoyarte en cada paso!" 
+                               TextColor="Black"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!--Section 3: Testimonials-->
+                <Frame BackgroundColor="LightGray" CornerRadius="10" Padding="10">
+                    <VerticalStackLayout>
+                        <Label Text="Testimonios" FontSize="18" FontAttributes="Bold" TextColor="Black" />
+                        <Label Text="En Fitness Club, nos enorgullece ser parte del viaje de transformación de nuestros miembros. Cada testimonio es un reflejo del esfuerzo, la dedicación y el compromiso de las personas que han decidido tomar el control de su salud y bienestar. Aquí compartimos algunas de las historias más inspiradoras que demuestran cómo el fitness puede cambiar vidas." 
+                               TextColor="Black"/>
+                        <Label Text="Nunca pensé que podría sentirme tan bien conmigo mismo. Antes de unirme a Fitness Club, me sentía cansado y sin energía todo el tiempo. Con la ayuda de los entrenadores y un plan de entrenamiento personalizado, logré perder 15 kilos en seis meses. Ahora tengo más confianza, me siento más fuerte y mi salud ha mejorado significativamente. Es el mejor regalo que me he dado."
+                               FontAttributes="Italic"
+                               TextColor="Black"/>
+                        <Label Text="– Carlos G." FontAttributes="Italic" TextColor="Black"/>
+                        <Label Text="Lo que más me encanta de Fitness Club es la comunidad. Siempre hay alguien dispuesto a ayudarte, motivarte y celebrar tus logros. Desde que comencé, no solo he mejorado físicamente, sino que también he hecho amistades increíbles. Me siento parte de algo especial, y eso me impulsa a dar lo mejor de mí cada día."
+                               FontAttributes="Italic"
+                               TextColor="Black"/>
+                        <Label Text="– Ana M." FontAttributes="Italic" TextColor="Black"/>
+                        <Label Text="Soy mamá de dos niños y, como muchas, dejé de priorizar mi salud. En Fitness Club encontré el apoyo que necesitaba para volver a enfocarme en mí. Los entrenadores me ayudaron a diseñar una rutina que se ajusta a mi vida ocupada. Ahora tengo más energía para mis hijos y me siento increíblemente orgullosa de lo que he logrado."
+                               FontAttributes="Italic"
+                               TextColor="Black"/>
+                        <Label Text ="– Laura T" FontAttributes="Italic" TextColor="Black"/>
+                        <Label Text="Estos testimonios son solo algunos ejemplos del impacto positivo que Fitness Club puede tener en tu vida. ¡Únete hoy y empieza a escribir tu propia historia de éxito! Tu transformación comienza aquí."
+                               TextColor="Black"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>

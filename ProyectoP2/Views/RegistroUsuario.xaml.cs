@@ -17,7 +17,6 @@ public partial class RegistroUsuario : ContentPage
 	{
 		InitializeComponent();
         
-        
 	}
 
     public async void NuevoUsuario_Clicked(object sender, EventArgs e)

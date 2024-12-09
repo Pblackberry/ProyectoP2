@@ -57,6 +57,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\back.png" />
+	  <None Remove="Resources\Images\bodybuilder.jpg" />
+	  <None Remove="Resources\Images\chest.png" />
+	  <None Remove="Resources\Images\estiramiento2.jpeg" />
+	  <None Remove="Resources\Images\imagen_general.jpg" />
+	  <None Remove="Resources\Images\imagen_gym.jpg" />
+	  <None Remove="Resources\Images\imagen_pesas.jpg" />
+	  <None Remove="Resources\Images\lifestyle.jpg" />
+	  <None Remove="Resources\Images\logo_icon.jpg" />
+	  <None Remove="Resources\Images\running_icon.jpg" />
+	  <None Remove="Resources\Images\sport.jpg" />
+	  <None Remove="Resources\Images\squat.png" />
+	  <None Remove="Resources\Images\training.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />

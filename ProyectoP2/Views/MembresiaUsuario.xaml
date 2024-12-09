@@ -5,10 +5,9 @@
              Title="MembresiaUsuario">
     <VerticalStackLayout>
         <HorizontalStackLayout>
-            <Label Text="Bienvenido  "/>
-            <Label Text="{Binding Correo}"
-                   VerticalOptions="Center" 
-                   HorizontalOptions="Center"/>
+            <Label Text="Bienvenido a tu app Fitness"/>
+
+            
         </HorizontalStackLayout>
         
     </VerticalStackLayout>
