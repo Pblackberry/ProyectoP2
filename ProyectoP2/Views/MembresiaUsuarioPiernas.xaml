@@ -3,13 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoP2.Views.MembresiaUsuarioPiernas"
              Title="MembresiaUsuarioPiernas">
-    <VerticalStackLayout>
-        <Label 
-            Text="Bienvenido a tu app Fitness"/>
-        <Label 
-            Text="HOY TOCA PATAS"/>
-        <Image Source="squat.png"/>
-        <Label 
-            Text="Rutina"/>
-    </VerticalStackLayout>
+    <AbsoluteLayout>
+        <VerticalStackLayout Padding="10" Spacing="5">
+            <Label 
+            Text="Bienvenido a tu app Fitness"
+            FontSize="28"
+            FontAttributes="Bold"/>
+            <HorizontalStackLayout Spacing="15">
+                <Label Text="El día de hoy te toca" VerticalOptions="End"/>
+                <Label Text="Piernas" FontSize="Medium" TextColor="LightBlue" FontAttributes="Bold" VerticalOptions="End"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <Image 
+            Source="squat.png"
+            HorizontalOptions="End"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="1,1,300,300"
+            Opacity="0.3"/>
+    </AbsoluteLayout>
 </ContentPage>
