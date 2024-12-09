@@ -3,10 +3,72 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoP2.Views.AboutPage"
              Title="AboutPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="10">
+
+            <Label Text="Quienes Somos" 
+               FontSize="24" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Center" />
+
+            <Image Source="logo_icon.jpg"
+                   WidthRequest="370"
+                   HeightRequest="300" 
+                   Aspect="AspectFill" />
+
+            <Label Text="Somos Power Gym, un gimnasio que te fascinará. Aspiramos a poseer un lugar que proteja la salud global de nuestros asociados. Nuestro centro te brindará la posibilidad de practicar deporte de manera segura, ya que está completamente equipado con todas las instalaciones que necesitas con un servicio de alta calidad. Incluimos lo último en equipamientos de ejercicio, máquinas de pesas, pesas libres, colchonetas y una zona específica para crossfit, ya que entendemos que las preferencias son variadas. Te esperamos." 
+                   FontSize="16" 
+                   TextColor="Gray" 
+                   HorizontalTextAlignment="Center" />
+
+            <Label Text="Horarios" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" />
+
+            <Label Text="Lunes a Viernes: 6:00 AM - 10:00 PM" 
+                   FontSize="18" />
+
+            <Label Text="Fin de Semana: 8:00 AM - 8:00 PM" 
+                   FontSize="18"/>
+
+            <Label Text="Feriados: 9:00 AM - 5:00 PM" 
+                   FontSize="18"/>
+
+            <Label Text="Clases de Crossfit: De lunes a viernes a las 10:00 AM y 4:00 PM" 
+               FontSize="18"/>
+
+            <BoxView 
+                HeightRequest="1" 
+                WidthRequest="100" 
+                Color="Black" 
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="Center"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Dirección
+                       Gral Anda Aguirre y Hernán Cortés
+                       Teléfonos
+                       Información: 099 588 6569
+                       Recepción: 096 420 0172
+                       Correo: powergym@gmail.com" 
+                   Grid.Column="0" 
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Start"
+                   FontSize="14"/>
+
+
+                <Image Source="ubicacion.png" 
+                   Grid.Column="1" 
+                   VerticalOptions="Center" 
+                   HorizontalOptions="End" />
+            </Grid>
+
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

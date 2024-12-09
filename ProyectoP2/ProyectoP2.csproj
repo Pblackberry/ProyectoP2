@@ -70,6 +70,7 @@
 	  <None Remove="Resources\Images\sport.jpg" />
 	  <None Remove="Resources\Images\squat.png" />
 	  <None Remove="Resources\Images\training.png" />
+	  <None Remove="Resources\Images\ubicacion.png" />
 	</ItemGroup>
 
 	<ItemGroup>
