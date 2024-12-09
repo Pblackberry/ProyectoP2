@@ -8,19 +8,19 @@
     Title="ProyectoP2">
 
     <TabBar>
-        <Tab Title="Home">
+        <Tab Icon="home.png" Title="Home">
             <ShellContent
                 Title="Home"
                 ContentTemplate="{DataTemplate local:MainPage}"
                 Route="MainPage"/>
         </Tab>
-        <Tab Title="About">
+        <Tab Icon="about.png" Title="Info">
             <ShellContent
                 Title="About"
                 ContentTemplate="{DataTemplate local:Views.AboutPage}"
                 Route="AboutPage"/>
         </Tab>
-        <Tab Title="Membresias">
+        <Tab Icon="person.png" Title="Membresia">
             <ShellContent 
                 Title="Membresias"
                 ContentTemplate="{DataTemplate local:Views.InicioSesion}"

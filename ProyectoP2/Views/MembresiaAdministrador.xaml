@@ -5,32 +5,35 @@
              Title="MembresiaAdministrador">
     <ScrollView>
         <AbsoluteLayout>
-            <CollectionView x:Name="CollectionMembresias"
-                            ItemsSource="{Binding CollectionMembresias}"
-                            Margin="20">
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
-                </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout>
-                            <HorizontalStackLayout>
-                                <Label Text="Id membresía: "/>
-                                <Label Text="{Binding Id_Membresias}"/>
-                            </HorizontalStackLayout>
-                            <HorizontalStackLayout>
-                                <Label Text="Nombre: "/>
-                                <Label Text="{Binding Nombre}"/>
-                            </HorizontalStackLayout>
-                            <HorizontalStackLayout>
-                                <Label Text="Cedula: "/>
-                                <Label Text="{Binding Cedula}"/>
-                            </HorizontalStackLayout>
-                        </StackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-
-            </CollectionView>
+           
+                <CollectionView x:Name="CollectionMembresias"
+                ItemsSource="{Binding CollectionMembresias}"
+                Margin="20">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Spacing="2" Padding="5">
+                                <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                                <HorizontalStackLayout Spacing="5">
+                                    <Label Text="Id Membresía:" StyleClass="MedBoldLabel"/>
+                                    <Label Text="{Binding Id_Membresias}" VerticalOptions="Center"/>
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout Spacing="5">
+                                    <Label Text="Nombre:" StyleClass="MedBoldLabel"/>
+                                    <Label Text="{Binding Nombre}" VerticalOptions="Center"/>
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout Spacing="5">
+                                    <Label Text="Cedula:" StyleClass="MedBoldLabel"/>
+                                    <Label Text="{Binding Cedula}" VerticalOptions="Center"/>
+                                </HorizontalStackLayout>
+                                <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            
             <Button x:Name="BotonRegistrar"
                     Text="Registrar nuevo usuario"
                     Clicked="BotonRegistrar_Clicked"
